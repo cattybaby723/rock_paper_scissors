@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">rock_paper_scissors</string>
+    <string name="computer">computer</string>
 </resources>
+
