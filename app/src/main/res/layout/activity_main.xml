@@ -8,14 +8,82 @@
 
 
     <TextView
-        android:id="@+id/computer"
+        android:id="@+id/opponent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/icon_computer"
         android:gravity="center_horizontal"
         android:text="@string/computer"
+        android:drawablePadding="@dimen/default_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/opponentShape"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opponent"/>
+
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/versus"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/playerShape"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opponentShape"/>
+
+
+    <ImageView
+        android:id="@+id/playerShape"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/rock"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <ImageButton
+        android:id="@+id/rock"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_gray"
+        android:src="@drawable/rock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/paper"/>
+
+
+    <ImageButton
+        android:id="@+id/paper"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
+        android:background="@drawable/bg_gray"
+        android:src="@drawable/paper"
+        app:layout_constraintBottom_toBottomOf="@id/rock"
+        app:layout_constraintLeft_toRightOf="@+id/rock"
+        app:layout_constraintRight_toLeftOf="@+id/scissors"/>
+
+
+    <ImageButton
+        android:id="@+id/scissors"
+        android:layout_width="@dimen/default_image_size"
+        android:layout_height="@dimen/default_image_size"
+        android:background="@drawable/bg_gray"
+        android:src="@drawable/scissors"
+        app:layout_constraintBottom_toBottomOf="@+id/rock"
+        app:layout_constraintLeft_toRightOf="@+id/paper"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>

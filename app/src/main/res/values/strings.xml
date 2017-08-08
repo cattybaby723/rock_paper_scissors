@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">rock_paper_scissors</string>
+
+    <string name="welcome">Hello! \n %1$s</string>
+    <string name="play">play</string>
     <string name="computer">computer</string>
+
+    <string name="win">WIN</string>
+    <string name="lose">LOSE</string>
+    <string name="tie">TIE</string>
+    <string name="versus">VS.</string>
 </resources>
 
